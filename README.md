@@ -1,9 +1,7 @@
 [Adium](https://adium.im)
 ========================
 
-[![Adiumy](https://adium.im/images/logo.png)](https://adiumx.cachefly.net/Adium_1.5.10.4.dmg)
-
-[Download Adium 1.5.10.4](https://adiumx.cachefly.net/Adium_1.5.10.4.dmg)
+This is a currently not working fork with a goal to getting it building on modern macOS on Apple Silicon and whatever Intel machines are still out there by Matt Lee <mattl@gnu.org>
 
 ## About Adium ##
 
@@ -41,6 +39,3 @@ Adium X 0.88 up to Adium 1.4.5 are Universal applications which run natively on 
 * [Coding Style Guidelines](https://web.archive.org/web/20170306235100/https://trac.adium.im/wiki/CodingStyle)
 * [Coding Tips and Tricks](https://web.archive.org/web/20200923044150/https://trac.adium.im/wiki/DevelopmentTipsAndTricks)
 
-## Adium Contact information ##
- * https://adium.im/
- * feedback@adium.im
