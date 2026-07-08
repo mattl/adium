@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 100;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1166,13 +1166,16 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
 			fileType = sourcecode.java;
-			inputFiles = (
-			);
-			isEditable = 1;
 			outputFiles = (
 				"$(TARGET_BUILD_DIR)/$(INPUT_FILE_BASE).class",
 			);
-			script = "javac -d \"${TARGET_BUILD_DIR}\" \"${INPUT_FILE_PATH}\"\n";
+			script = (
+				"javac -d \"${TARGET_BUILD_DIR}\" \"${INPUT_FILE_PATH}\"",
+				"",
+				"",
+				"",
+				"",
+			);
 		};
 /* End PBXBuildRule section */
 
@@ -1315,10 +1318,9 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		34BD9D5F053146CC000AB133 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
 			comments = Frameworks;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolder = Frameworks;
 			files = (
 				116E369A10B72934002EDB0F /* Growl.framework in Copy Frameworks */,
 				118A44540FEEA82E008153C0 /* libjson-glib.framework in Copy Frameworks */,
@@ -1339,23 +1341,19 @@
 				3419FE230531586A00C68BA3 /* Adium.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9D6A053146CC000AB133 /* Copy AdiumPlugins */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 			);
 			name = "Copy AdiumPlugins";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4BF2E91F067CB76300743318 /* Copy Built-in Xtras */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolder = Resources;
 			files = (
 				11F145F00B546AC500CA91F6 /* Menu Bar Icons in Copy Built-in Xtras */,
 				34082675075B079800703011 /* Dock Icons in Copy Built-in Xtras */,
@@ -1366,28 +1364,23 @@
 				4BB1E493067F2EAC00D1DB86 /* Scripts in Copy Built-in Xtras */,
 			);
 			name = "Copy Built-in Xtras";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		637864600F9BE1B70040DEDA /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolder = Frameworks;
 			files = (
 			);
 			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F51BCD3E0A156281000FDC06 /* Copy Spotlight Importer */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = Contents/Library/Spotlight;
-			dstSubfolderSpec = 1;
+			dstSubfolder = Wrapper;
 			files = (
 				4D9164BC25780B2D00930BC8 /* AdiumSpotlightImporter.mdimporter in Copy Spotlight Importer */,
 			);
 			name = "Copy Spotlight Importer";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -4119,16 +4112,13 @@
 /* Begin PBXFrameworksBuildPhase section */
 		312ED3C70C7E875B00A6BDA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				312ED3D30C7E876E00A6BDA9 /* Cocoa.framework in Frameworks */,
 				312ED3D50C7E878300A6BDA9 /* SenTestingKit.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3485D67E09EB416300232CC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				4D4B483425F3F03B000CEF01 /* libglib-2.0.dylib in Frameworks */,
 				4D4B483625F3F04B000CEF01 /* libgobject-2.0.dylib in Frameworks */,
@@ -4145,11 +4135,9 @@
 				4D9162602577EDA600930BC8 /* AIUtilities.framework in Frameworks */,
 				3485D8EB09EB446900232CC4 /* Adium.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9D57053146CC000AB133 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				4D4B482F25F3EFC5000CEF01 /* libglib-2.0.dylib in Frameworks */,
 				4D4B485D25F3F87C000CEF01 /* libgmodule-2.0.dylib in Frameworks */,
@@ -4184,11 +4172,9 @@
 				4D9162642577EDC600930BC8 /* AIUtilities.framework in Frameworks */,
 				3419F7760531512200C68BA3 /* Adium.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9DDB05314751000AB133 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				4DAA97BB2577C4140000D3F7 /* AutoHyperlinks.framework in Frameworks */,
 				4D4A20EE2577585E008BB8E3 /* MMTabBarView.framework in Frameworks */,
@@ -4197,7 +4183,6 @@
 				34D836E507CBF593006466F2 /* Carbon.framework in Frameworks */,
 				3448761406D1EC0C00DA778C /* Cocoa.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -7545,7 +7530,6 @@
 /* Begin PBXHeadersBuildPhase section */
 		3485DB1209EBCE4000232CC4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				1192E6D90FD3056F003CAEF5 /* AIAnnoyingIRCMessagesHiderPlugin.h in Headers */,
 				6332879B0A769BF3004D0F2B /* AIPurpleLiveJournalAccount.h in Headers */,
@@ -7641,11 +7625,9 @@
 				34E4CD5D0E68277D00D1B0DC /* ESIRCAccountViewController.h in Headers */,
 				34E4CD600E68277D00D1B0DC /* ESIRCAccount.h in Headers */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9DB105314751000AB133 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				34DC8A490A7EEEF7003E1636 /* AIContactControllerProtocol.h in Headers */,
 				34DC8A570A7EEEF7003E1636 /* ESPresetManagementController.h in Headers */,
@@ -7776,7 +7758,6 @@
 				63B0EC9D0F8FBB660062476B /* AIProxyListObject.h in Headers */,
 				979AA6A714D59DC8008730DF /* AIBoolToControlTextColorTransformer.h in Headers */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
@@ -7792,8 +7773,6 @@
 				312ED3C80C7E875B00A6BDA9 /* Run Unit Tests */,
 			);
 			buildRules = (
-			);
-			dependencies = (
 			);
 			name = "Unit tests";
 			productName = "Unit tests";
@@ -7900,7 +7879,6 @@
 				};
 			};
 			buildConfigurationList = DADE8E3A085507450062B664 /* Build configuration list for PBXProject "Adium" */;
-			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -7955,6 +7933,7 @@
 				Japanese,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CocAIMe2 */;
+			preferredProjectObjectVersion = 100;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -8053,16 +8032,13 @@
 /* Begin PBXResourcesBuildPhase section */
 		312ED3C50C7E875B00A6BDA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				31034F0C0C8142720003F5AA /* UTF8Snowman.txt in Resources */,
 				31FA804C0D4A8EB200ABE634 /* Adium.sdef in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3485D67C09EB416300232CC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				11AE5587109CCCC30074BDC2 /* irc-small.png in Resources */,
 				3485DB5F09EBCE7400232CC4 /* DCPurpleGaduGaduJoinChatView.nib in Resources */,
@@ -8108,11 +8084,9 @@
 				34E4CD670E68279C00D1B0DC /* PurpleDefaultsIRC.plist in Resources */,
 				1150A9960FBE48D600E0BD31 /* ESIRCAccountView.nib in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9D24053146CC000AB133 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				111256060F8DA2B200E76177 /* ESBonjourAccountView.nib in Resources */,
 				6318DBA10F8D93F200C5E584 /* WebKit Defaults.plist in Resources */,
@@ -8363,11 +8337,9 @@
 				5AC423F3178CBD5100F5911A /* ChatCyclingDefaults-Old.plist in Resources */,
 				5AC423F7178CBD5700F5911A /* ChatCyclingDefaults.plist in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9DC505314751000AB133 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				636D93400E4E9ED600E5F558 /* AB Display Format Defaults.plist in Resources */,
 				636D93890E4EA23F00E5F558 /* AdiumAddressBookAction_Yahoo.scpt in Resources */,
@@ -8399,44 +8371,35 @@
 				1199AB0710BE13E600646322 /* Deny.tiff in Resources */,
 				1199AB0810BE13E600646322 /* Ignore.tiff in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		312ED3C80C7E875B00A6BDA9 /* Run Unit Tests */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
 			name = "Run Unit Tests";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = (
+				"# Run the unit tests in this test bundle.",
+				"\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"",
+				"",
+			);
 		};
 		344DE6AD0E436276005FF022 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/AdiumLibpurple.framework/Versions/A/AdiumLibpurple",
 			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# otool -L \"$SCRIPT_INPUT_FILE_0\" | grep libpurple.framework | \n# install_name_tool -change @executable_path/../Frameworks/libpurple.framework/Versions/0.5.0/libpurple @executable_path/../Frameworks/libpurple.framework/Versions/Current/libpurple\n";
+			shellScript = (
+				"# otool -L \"$SCRIPT_INPUT_FILE_0\" | grep libpurple.framework | ",
+				"# install_name_tool -change @executable_path/../Frameworks/libpurple.framework/Versions/0.5.0/libpurple @executable_path/../Frameworks/libpurple.framework/Versions/Current/libpurple",
+				"",
+			);
 		};
 		345DFF4A05564DB200CEE7B3 /* Run Generate Buildnum File Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputPaths = (
 				$TARGET_BUILD_DIR/include/PlistMacros.h,
 				"$(SRCROOT)/Plists/buildnum",
@@ -8445,16 +8408,17 @@
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/Adium.app/Contents/Resources/buildnum",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "gcc -E -P -x c -Wno-trigraphs -include \"$SCRIPT_INPUT_FILE_0\" -C \"$SCRIPT_INPUT_FILE_1\" -o \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			shellScript = (
+				"gcc -E -P -x c -Wno-trigraphs -include \"$SCRIPT_INPUT_FILE_0\" -C \"$SCRIPT_INPUT_FILE_1\" -o \"$SCRIPT_OUTPUT_FILE_0\"",
+				"",
+			);
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		312ED3C60C7E875B00A6BDA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				312ED3E20C7E8A0700A6BDA9 /* TestDateFormatterStringRepWithInterval.m in Sources */,
 				31034EFF0C8142680003F5AA /* TestStringAdditions.m in Sources */,
@@ -8465,11 +8429,9 @@
 				634BCD1F0DDC1542005AF1C2 /* TestMutableStringAdditions.m in Sources */,
 				3107D5250F63134F0051DDD5 /* TestAttributedStringAdditions.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3485D67D09EB416300232CC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				1192E6DA0FD30578003CAEF5 /* AIAnnoyingIRCMessagesHiderPlugin.m in Sources */,
 				117009A70F7E7D720078D6AB /* AIIRCServicesPasswordPlugin.m in Sources */,
@@ -8566,11 +8528,9 @@
 				34E4CD5F0E68277D00D1B0DC /* ESIRCAccount.m in Sources */,
 				34E4CD610E68277D00D1B0DC /* ESIRCService.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9D42053146CC000AB133 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				11D9156F0FFC0FEB00B39713 /* AIImageShackImageUploader.m in Sources */,
 				111E89010F93FE3900A5F18B /* AIRealNameTooltip.m in Sources */,
@@ -8898,11 +8858,9 @@
 				5A4B77E916FBDDC700DF398C /* NSData+Base64.m in Sources */,
 				76FBDAC91733B9CA00C9F10B /* STTwitterHTML.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34BD9DC805314751000AB133 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				1164A9270F7AD70700110AE4 /* AIContentTopic.m in Sources */,
 				11FC23C30F768C2900C1C906 /* AIXMLElement.m in Sources */,
@@ -9008,7 +8966,6 @@
 				63B0EC9C0F8FBB660062476B /* AIProxyListObject.m in Sources */,
 				979AA6A814D59DC8008730DF /* AIBoolToControlTextColorTransformer.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -10555,126 +10512,148 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		312ED3CD0C7E875C00A6BDA9 /* Debug */ = {
+		312ED3CD0C7E875C00A6BDA9 /* Debug configuration for PBXNativeTarget "Unit tests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2050FAFAA4700B310AC /* Unit tests.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
-		312ED3CE0C7E875C00A6BDA9 /* Release */ = {
+		312ED3CE0C7E875C00A6BDA9 /* Release configuration for PBXNativeTarget "Unit tests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2050FAFAA4700B310AC /* Unit tests.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
-		312ED3CF0C7E875C00A6BDA9 /* Release-Debug */ = {
+		312ED3CF0C7E875C00A6BDA9 /* Release-Debug configuration for PBXNativeTarget "Unit tests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2050FAFAA4700B310AC /* Unit tests.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = "Release-Debug";
 		};
-		3485D68309EB416500232CC4 /* Debug */ = {
+		3485D68309EB416500232CC4 /* Debug configuration for PBXNativeTarget "AdiumLibpurple" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2060FAFAA4700B310AC /* AdiumLibpurple.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.AdiumPurple;
 			};
 			name = Debug;
 		};
-		3485D68409EB416500232CC4 /* Release */ = {
+		3485D68409EB416500232CC4 /* Release configuration for PBXNativeTarget "AdiumLibpurple" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2060FAFAA4700B310AC /* AdiumLibpurple.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.AdiumPurple;
 			};
 			name = Release;
 		};
-		3485D68509EB416500232CC4 /* Release-Debug */ = {
+		3485D68509EB416500232CC4 /* Release-Debug configuration for PBXNativeTarget "AdiumLibpurple" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2060FAFAA4700B310AC /* AdiumLibpurple.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.AdiumPurple;
 			};
 			name = "Release-Debug";
 		};
-		DADE8E00085507450062B664 /* Debug */ = {
+		DADE8E00085507450062B664 /* Debug configuration for PBXNativeTarget "Adium.Framework" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2070FAFAA4700B310AC /* Adium.framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Frameworks/Adium/Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.AdiumFramework;
 				PRODUCT_NAME = Adium;
 			};
 			name = Debug;
 		};
-		DADE8E01085507450062B664 /* Release */ = {
+		DADE8E01085507450062B664 /* Release configuration for PBXNativeTarget "Adium.Framework" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2070FAFAA4700B310AC /* Adium.framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Frameworks/Adium/Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.AdiumFramework;
 				PRODUCT_NAME = Adium;
 			};
 			name = Release;
 		};
-		DADE8E02085507450062B664 /* Release-Debug */ = {
+		DADE8E02085507450062B664 /* Release-Debug configuration for PBXNativeTarget "Adium.Framework" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2070FAFAA4700B310AC /* Adium.framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Frameworks/Adium/Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.AdiumFramework;
 				PRODUCT_NAME = Adium;
 			};
 			name = "Release-Debug";
 		};
-		DADE8E23085507450062B664 /* Debug */ = {
+		DADE8E23085507450062B664 /* Debug configuration for PBXNativeTarget "Adium" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2040FAFAA4700B310AC /* Adium.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -10682,26 +10661,30 @@
 				);
 				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/Frameworks/glib.framework/Headers\"";
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/usr/local/Cellar/libffi/3.3_2/lib,
 					/usr/local/Cellar/expat/2.2.10/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.adiumX;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
-		DADE8E24085507450062B664 /* Release */ = {
+		DADE8E24085507450062B664 /* Release configuration for PBXNativeTarget "Adium" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2040FAFAA4700B310AC /* Adium.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -10710,26 +10693,30 @@
 				GCC_PREPROCESSOR_DEFINITIONS = RELEASE_BUILD;
 				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/Frameworks/glib.framework/Headers\"";
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/usr/local/Cellar/libffi/3.3_2/lib,
 					/usr/local/Cellar/expat/2.2.10/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.adiumX;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
-		DADE8E25085507450062B664 /* Release-Debug */ = {
+		DADE8E25085507450062B664 /* Release-Debug configuration for PBXNativeTarget "Adium" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63C7E2040FAFAA4700B310AC /* Adium.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -10741,19 +10728,23 @@
 				);
 				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/Frameworks/glib.framework/Headers\"";
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/usr/local/Cellar/libffi/3.3_2/lib,
 					/usr/local/Cellar/expat/2.2.10/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.adiumX;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = "Release-Debug";
 		};
-		DADE8E3B085507450062B664 /* Debug */ = {
+		DADE8E3B085507450062B664 /* Debug configuration for PBXProject "Adium" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -10777,6 +10768,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -10799,13 +10792,13 @@
 					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "\"$(CFLAGS)\"";
 				PRODUCT_NAME = "${TARGET_NAME}";
 			};
 			name = Debug;
 		};
-		DADE8E3C085507450062B664 /* Release */ = {
+		DADE8E3C085507450062B664 /* Release configuration for PBXProject "Adium" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -10829,6 +10822,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -10850,12 +10845,12 @@
 					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "${TARGET_NAME}";
 			};
 			name = Release;
 		};
-		DADE8E3D085507450062B664 /* Release-Debug */ = {
+		DADE8E3D085507450062B664 /* Release-Debug configuration for PBXProject "Adium" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -10879,6 +10874,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -10901,7 +10898,7 @@
 					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "${TARGET_NAME}";
 			};
 			name = "Release-Debug";
@@ -10912,51 +10909,46 @@
 		312ED3CC0C7E875C00A6BDA9 /* Build configuration list for PBXNativeTarget "Unit tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				312ED3CD0C7E875C00A6BDA9 /* Debug */,
-				312ED3CE0C7E875C00A6BDA9 /* Release */,
-				312ED3CF0C7E875C00A6BDA9 /* Release-Debug */,
+				312ED3CD0C7E875C00A6BDA9 /* Debug configuration for PBXNativeTarget "Unit tests" */,
+				312ED3CE0C7E875C00A6BDA9 /* Release configuration for PBXNativeTarget "Unit tests" */,
+				312ED3CF0C7E875C00A6BDA9 /* Release-Debug configuration for PBXNativeTarget "Unit tests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 		3485D68209EB416500232CC4 /* Build configuration list for PBXNativeTarget "AdiumLibpurple" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3485D68309EB416500232CC4 /* Debug */,
-				3485D68409EB416500232CC4 /* Release */,
-				3485D68509EB416500232CC4 /* Release-Debug */,
+				3485D68309EB416500232CC4 /* Debug configuration for PBXNativeTarget "AdiumLibpurple" */,
+				3485D68409EB416500232CC4 /* Release configuration for PBXNativeTarget "AdiumLibpurple" */,
+				3485D68509EB416500232CC4 /* Release-Debug configuration for PBXNativeTarget "AdiumLibpurple" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 		DADE8DFF085507450062B664 /* Build configuration list for PBXNativeTarget "Adium.Framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DADE8E00085507450062B664 /* Debug */,
-				DADE8E01085507450062B664 /* Release */,
-				DADE8E02085507450062B664 /* Release-Debug */,
+				DADE8E00085507450062B664 /* Debug configuration for PBXNativeTarget "Adium.Framework" */,
+				DADE8E01085507450062B664 /* Release configuration for PBXNativeTarget "Adium.Framework" */,
+				DADE8E02085507450062B664 /* Release-Debug configuration for PBXNativeTarget "Adium.Framework" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 		DADE8E22085507450062B664 /* Build configuration list for PBXNativeTarget "Adium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DADE8E23085507450062B664 /* Debug */,
-				DADE8E24085507450062B664 /* Release */,
-				DADE8E25085507450062B664 /* Release-Debug */,
+				DADE8E23085507450062B664 /* Debug configuration for PBXNativeTarget "Adium" */,
+				DADE8E24085507450062B664 /* Release configuration for PBXNativeTarget "Adium" */,
+				DADE8E25085507450062B664 /* Release-Debug configuration for PBXNativeTarget "Adium" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 		DADE8E3A085507450062B664 /* Build configuration list for PBXProject "Adium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DADE8E3B085507450062B664 /* Debug */,
-				DADE8E3C085507450062B664 /* Release */,
-				DADE8E3D085507450062B664 /* Release-Debug */,
+				DADE8E3B085507450062B664 /* Debug configuration for PBXProject "Adium" */,
+				DADE8E3C085507450062B664 /* Release configuration for PBXProject "Adium" */,
+				DADE8E3D085507450062B664 /* Release-Debug configuration for PBXProject "Adium" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */

@@ -49,5 +49,5 @@ localizable-strings:
 	rmdir tmp || true
 
 latest:
-	hg pull -u
+	git pull
 	make adium
